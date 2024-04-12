@@ -12,7 +12,7 @@ public final class ploog extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println("Consider the following!\nMY BALLS IN YO JAWS !!!! YIPPEEE!!!!");
+        System.out.println("YIPPEEE!!!!");
         Bukkit.getPluginCommand("balls").setExecutor(new BallsCommand());
 
         Bukkit.getPluginManager().registerEvents(new TNTStick(), this);
