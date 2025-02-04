@@ -12,10 +12,11 @@ public final class ploog extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println("YIPPEEE!!!!");
+        System.out.println("YIPPEEE!!!!Kaiyay");
         Bukkit.getPluginCommand("balls").setExecutor(new BallsCommand());
 
         Bukkit.getPluginManager().registerEvents(new TNTStick(), this);
+        Bukkit.getPluginManager().registerEvents(new GrappleHook(), this);
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, this::BlowUpTNT, 0L, 0L);
     }

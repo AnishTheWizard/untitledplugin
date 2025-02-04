@@ -12,6 +12,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Random;
 
 public class TNTStick  implements Listener {
@@ -31,8 +32,7 @@ public class TNTStick  implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-
-        if(event.hasItem() && event.getItem().getType() == Material.STICK) {
+        if(event.hasItem() && Objects.requireNonNull(event.getItem()).getType() == Material.STICK) {
             flingTNT(event.getPlayer());
         }
     }
